@@ -1,0 +1,21 @@
+clip-lib (1.2.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * Make the package a non-native one.
+  * debian/control:
+    - add myself to uploaders.
+    - update standards version to 3.9.2.
+    - add missing depends on ${misc:Depends}.
+    - rename packages.
+    - add build dep on dh-autoreconf.
+  * debian/rules:
+    - use autoreconf dh addon.
+
+ -- Yves-Alexis Perez <clipos@ssi.gouv.fr>  Wed, 25 May 2011 15:25:19 +0200
+
+clip-lib (1.2.12.1) unstable; urgency=low
+
+  * License fix.
+  * Debian packaging
+
+ -- Olivier Levillain <clipos@ssi.gouv.fr>  Thu, 03 Feb 2011 10:50:18 +0100

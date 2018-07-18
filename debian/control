@@ -1,0 +1,25 @@
+Source: clip-lib
+Priority: extra
+Maintainer: Olivier Levillain <clipos@ssi.gouv.fr>
+Uploaders: Yves-Alexis Perez <clipos@ssi.gouv.fr>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, dh-autoreconf
+Standards-Version: 3.9.2
+Section: non-free/libs
+
+Package: libclip-dev
+Breaks: clip-lib-dev
+Replaces: clip-lib-dev
+Section: non-free/libdevel
+Architecture: any
+Depends: libclip1 (= ${binary:Version}), ${misc:Depends}
+Description: Useful common CLIP functions
+ This library contains useful functions related to CLIP
+
+Package: libclip1
+Breaks: clip-lib
+Replaces: clip-lib
+Section: non-free/libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Useful common CLIP functions
+ This library contains useful functions related to CLIP

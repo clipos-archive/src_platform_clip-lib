@@ -1,0 +1,151 @@
+# ChangeLog for <clip-libs>/<clip-lib>
+
+*clip-lib-1.2.17 (27 Nov 2013)
+
+  27 Nov 2013; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.17.ebuild, -clip-lib-1.2.16.ebuild:
+  Fix segfault in clip_recv_fd.
+
+*clip-lib-1.2.16 (07 Mar 2013)
+
+  07 Mar 2013; Mickaël Salaün <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.16.ebuild, -clip-lib-1.2.15.ebuild:
+  Force umask to 0077 in the fork helper.
+
+*clip-lib-1.2.15 (15 Feb 2012)
+
+  15 Feb 2012; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.15.ebuild, -clip-lib-1.2.14.ebuild:
+  clip_closeall() - do not error out when close() returns
+  ENODEV.
+
+*clip-lib-1.2.14 (17 Aug 2011)
+
+  17 Aug 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.14.ebuild, -clip-lib-1.2.13.ebuild:
+  Add a couple functions to send / receive file descriptors over
+  UNIX sockets.
+
+  25 May 2011; Vincent Strubel <clipos@ssi.gouv.fr>
+  clip-lib-1.2.12.ebuild:
+  Call eautoreconf to fix b0rken libtool stuff in the distfiles.
+
+*clip-lib-1.2.13 (25 May 2011)
+
+  25 May 2011; Olivier Levillain <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.13.ebuild, -clip-lib-1.2.12-r1.ebuild:
+  Debian packaging updates.
+
+*clip-lib-1.2.12-r1 (02 Feb 2011)
+
+  02 Feb 2011; Olivier Levillain <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.12-r1.ebuild, -clip-lib-1.2.12.ebuild:
+  Debian packaging updates.
+
+*clip-lib-1.2.12 (16 Nov 2009)
+
+  16 Nov 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.12.ebuild, -clip-lib-1.2.11.ebuild:
+  Merge changes from CELAR audit.
+
+*clip-lib-1.2.11 (02 Oct 2009)
+
+  02 Oct 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.11.ebuild, -clip-lib-1.2.10.ebuild:
+  Merge patches from BIS QUICKWIN audit.
+
+*clip-lib-1.2.10 (18 Mar 2009)
+
+  18 Mar 2009; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.10.ebuild, -clip-lib-1.2.9.ebuild:
+  Fix gcc-4 warnings.
+
+*clip-lib-1.2.9 (22 Dec 2008)
+
+  22 Dec 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.9.ebuild, -clip-lib-1.2.8.ebuild:
+  More arguments to clip_accept_one() calls.
+
+*clip-lib-1.2.8 (28 May 2008)
+
+  28 May 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.8.ebuild, -clip-lib-1.2.7.ebuild:
+  Fix time-out-less read and writes.
+
+*clip-lib-1.2.7 (14 May 2008)
+
+  14 May 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.7.ebuild, -clip-lib-1.2.6.ebuild:
+  Add doxygen source browser. 
+  Add clip_sock_write() and clip_accept_one().
+
+*clip-lib-1.2.6 (10 Jan 2008)
+
+  10 Jan 2008; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.6.ebuild, -clip-lib-1.2.5.ebuild:
+  Add a clip_reset_fds() function to close all open fd's and reopen
+  the files passed as arguments for standard I/O, without fork()'ing
+  like clip_daemonize. This is needed for bug #117.
+
+  07 Nov 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  Remove stale ebuilds before 1.2.5.
+
+*clip-lib-1.2.5 (12 Oct 2007)
+
+  12 Oct 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.5.ebuild:
+  New clip_sock_read function in the API : read on a socket with 
+  a timeout.
+  Started to rectify a smallish naming conventions glitch : 
+  clip_listenOnSock is now aliased as clip_sock_listen, it will
+  be removed as soon as I can break the API completely :).
+
+*clip-lib-1.2.4 (23 Aug 2007)
+
+  23 Aug 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.4.ebuild:
+  Smallish addition to the API + new tests.
+
+*clip-lib-1.2.3 (06 Mar 2007)
+
+  06 Mar 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.3.ebuild:
+  Better default CFLAGS, updated libtool versions.
+  
+*clip-lib-1.2.2 (05 Mar 2007)
+
+  05 Mar 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.2.ebuild:
+  Bump, makefile revamp, works better with CPREFIX=/.
+  
+*clip-lib-1.2.1 (11 Jan 2007)
+
+  11 Jan 2007; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.1.ebuild:
+  Bump, added capability support.
+
+*clip-lib-1.2.0 (21 Sep 2006)
+
+  21 Sep 2006; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.2.0.ebuild:
+  Version bump, take out vserver code that doesn't play along too 
+  well with dynamic linking at the moment, move it to a separate
+  package (clip-libvserver).
+
+*clip-lib-1.1.1 (21 Aug 2006)
+
+  21 Aug 2006; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.1.1.ebuild:
+  Version bump. Added a clip_checkgroup function to check group 
+  membership.
+
+*clip-lib-1.1 (18 May 2006)
+
+  18 May 2006; Vincent Strubel <clipos@ssi.gouv.fr>
+  +clip-lib-1.1.ebuild:
+  Version bump. Initial vserver (attach, jailself) support.
+
+*clip-lib-1.0 (04 apr 2006)
+  
+  04 apr 2006; Vincent Strubel <clipos@ssi.gouv.fr>
+  Initial import.

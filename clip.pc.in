@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: clip
+Description: Clip helper functions
+Version: @VERSION@
+
+@PKGCONFIG_REQUIRES@:
+Libs: -L${libdir} -lclip
+Cflags: -I${includedir}/clip
